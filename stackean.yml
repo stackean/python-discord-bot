@@ -4,7 +4,7 @@ engine: python
 
 nodes:
   nodeType: apache2-python
-  displayName: Bot Node
+  displayName: bot-node-${fn.random}
   diskLimit: 5
   cloudlets: 1
   flexibleCloudlets: 4
