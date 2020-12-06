@@ -13,7 +13,7 @@ nodes:
 
 onInstall:
   deploy:
-    archive: https://github.com/stackean/python-discord-bot/archive/main.zip
+    archive: https://github.com/stackean/sample-python-discord-bot/archive/main.zip
     name: stackean-python-discord-bot
     context: ROOT
   cmd:
