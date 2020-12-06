@@ -1,0 +1,27 @@
+type: install
+name: Stackean Python Discord Bot
+engine: python
+
+nodes:
+  nodeType: apache2-python
+  displayName: Bot Node
+  diskLimit: 5
+  cloudlets: 1
+  flexibleCloudlets: 4
+  env:
+    DISCORD_TOKEN: ${settings.discord_token}
+
+onInstall:
+  deploy:
+    archive: https://github.com/stackean/python-discord-bot/archive/main.zip
+    name: stackean-python-discord-bot
+    context: ROOT
+  cmd:
+    - python3 -m pip install -r requirements.txt
+    - python3 bot.py
+    
+settings:
+  fields:
+    - type: string
+      name: discord_token
+      caption: discord_token
